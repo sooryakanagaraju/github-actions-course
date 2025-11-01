@@ -4,11 +4,13 @@ on: push
 
 jobs: 
   my-first-job:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      -run: echo "hwllo world"
+      - name: say hello
+        run: echo "hello world"
   my-second-job:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      -run: echo "bye world"
+      - name: say bye
+        run: echo "bye world"
 
