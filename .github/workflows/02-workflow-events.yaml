@@ -2,11 +2,11 @@ name: 02 - Workflow Events
 on: 
   workflow_dispatch
 
-    
 jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
       - name: show the trigger
         run: echo "i have been triggered with an ${{github.event}} event."
+  
         
