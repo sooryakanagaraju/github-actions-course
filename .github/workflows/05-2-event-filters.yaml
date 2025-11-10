@@ -1,0 +1,16 @@
+name: 05-2-event-filters
+
+on: 
+    pull_request:
+        types: closed
+
+        branches:
+            - main
+
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: 05 2 event filters
+              run: echo "this is the 05-02-event filters"
+
