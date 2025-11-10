@@ -1,0 +1,15 @@
+name: 05-1-Event filters and activity
+
+on: 
+    pull_request:
+        types: [opened, synchronize]
+        branches:
+            - main
+
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo
+              run: echo 'running the 05 workflow'
+
