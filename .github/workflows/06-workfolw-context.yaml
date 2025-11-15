@@ -3,6 +3,13 @@ name: 06-contexts
 on:
     push:
     workflow_dispatch:
+        inputs:
+            debug:
+                type: boolean
+                default: false
+
+
+run-name: My custom workflow is in debug state - ${{inputs.debug}}
 
 jobs:
     echo-data:
