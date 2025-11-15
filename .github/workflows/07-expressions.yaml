@@ -16,8 +16,11 @@ jobs:
               if: inputs.debug == true
               run: |
                 echo "Triggered by - ${{github.event_name}}"
-                echo "Branch - ${{github.head_ref}}"
+                echo "Branch - ${{github.ref}}"
                 echo "Commit SHA - ${{github.sha}}"
                 echo "Runner os - ${{runner.os}}"
-                
+            - name: '${{inputs.debug}} Print when triggered from main'
+              if: inputs.debug && github.ref == 'refs/heads/main'
+              run: echo "I was triggered form main branch"
+
             
