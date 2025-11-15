@@ -16,6 +16,7 @@ jobs:
         env:
             MY_WORKFLOW_NAME: '06-workflow context'
             MY_REPOSITORY_ACTION_NAME: '${{github.action_repository}}'
+            # this wont work if we pass context to the env
         runs-on: ubuntu-latest
         steps:
             - name: Display Information
